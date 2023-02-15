@@ -1,0 +1,23 @@
+{
+  "name": "p7_lespetitsplats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0cl0ck/P7_LesPetitsPlats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0cl0ck/P7_LesPetitsPlats/issues"
+  },
+  "homepage": "https://github.com/0cl0ck/P7_LesPetitsPlats#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
