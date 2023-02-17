@@ -1776,4 +1776,4 @@ const recipes = [
   },
 ];
 
-window.recipes = recipes;
+// window.recipes = recipes;
