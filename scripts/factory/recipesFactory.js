@@ -56,7 +56,6 @@ export function recipesFactory(recipe) {
       ingredientName.classList.add("ingredient-name");
       ingredientQuantity.classList.add("ingredient-quantity");
 
-      // ingredientName.innerText = ingredients[i].ingredientElement;
       ingredientName.innerText = ingredient.ingredient;
 
       if (ingredient.quantity != undefined) {
