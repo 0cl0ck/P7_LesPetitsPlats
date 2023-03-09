@@ -1,0 +1,11 @@
+.card-body {
+  display: flex;
+}
+.card-body ul {
+  list-style-type: none;
+}
+.card-body .recipe-description {
+  width: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */

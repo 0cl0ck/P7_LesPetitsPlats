@@ -11,20 +11,21 @@ export function recipesFactory(recipe) {
     appliance,
     ustensils,
   } = recipe;
-  function recipecardDOM() {
+  function recipeCardDOM() {
     const image = document.createElement("img");
     image.classList.add("card-img-top");
     image.setAttribute("src", "./assets/img/test.svg");
     image.setAttribute("alt", "test");
 
-    const cardContainer = document.createElement("div");
-    cardContainer.classList.add("col");
+    // const cardContainer = document.createElement("div");
+    // cardContainer.classList.add("col-4");
 
     const card = document.createElement("div");
     card.classList.add("card");
+    card.classList.add("col-4");
 
-    const card_body = document.createElement("div");
-    card_body.classList.add("card-body");
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
 
     const header = document.createElement("header");
     header.classList.add("d-flex");
@@ -44,11 +45,13 @@ export function recipesFactory(recipe) {
     minute.innerText = " " + time + " min";
 
     const recipeDescription = document.createElement("p");
+    recipeDescription.classList.add("recipe-description");
     recipeDescription.innerText = description;
 
     // const ingredients = document.createElement("div");
+    let ingredientsList = document.createElement("ul");
+    ingredientsList.classList.add("recipe-ingredients");
     ingredients.map((ingredient) => {
-      console.log(ingredient);
       let ingredientElement = document.createElement("li");
       let ingredientName = document.createElement("span");
       let ingredientQuantity = document.createElement("span");
@@ -68,8 +71,9 @@ export function recipesFactory(recipe) {
 
       ingredientElement.appendChild(ingredientName);
       ingredientElement.appendChild(ingredientQuantity);
-      recipeDescription.appendChild(ingredientElement);
+      ingredientsList.appendChild(ingredientElement);
     });
+    cardBody.appendChild(ingredientsList);
 
     timeDiv.appendChild(icon_clock);
     timeDiv.appendChild(minute);
@@ -77,12 +81,15 @@ export function recipesFactory(recipe) {
     header.appendChild(recipeTitle);
     header.appendChild(timeDiv);
 
+    cardBody.appendChild(recipeDescription);
+
     card.appendChild(image);
     card.appendChild(header);
-    card.appendChild(recipeDescription);
+    card.appendChild(cardBody);
 
-    cardContainer.appendChild(card);
-    return cardContainer;
+    // cardContainer.appendChild(card);
+
+    return card;
   }
-  return { recipecardDOM };
+  return { recipeCardDOM };
 }
